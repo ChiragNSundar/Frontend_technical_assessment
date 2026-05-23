@@ -4,6 +4,28 @@ This project is a modern, interactive, node-based workflow pipeline builder. It 
 
 ---
 
+## 📁 Project Directory Structure
+
+```text
+Frontend_technical_assessment/
+├── backend/
+│   └── main.py              # FastAPI application server & cycle checking
+├── frontend/
+│   ├── public/              # Public assets
+│   ├── src/
+│   │   ├── nodes/           # React Flow nodes
+│   │   │   ├── BaseNode.js  # Reusable base node abstraction component
+│   │   │   ├── ...          # 9 individual node components
+│   │   ├── App.js           # Main app layout
+│   │   ├── index.css        # Premium SaaS visual theme and styles
+│   │   ├── store.js         # Zustand flow-state store
+│   │   ├── submit.js        # Parser dispatcher & analysis overlay modal
+│   │   ├── toolbar.js       # Labeled draggable nodes selector toolbar
+│   │   └── ui.js            # React Flow canvas setup
+│   └── package.json         # NPM manifest & dependencies
+└── .gitignore               # Root git exclusion ruleset
+```
+
 ## 🛠️ Implemented Features
 
 ### Part 1: Reusable Node Abstraction & Custom Nodes
