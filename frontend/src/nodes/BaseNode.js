@@ -62,7 +62,7 @@ export const BaseNode = ({
       {inputs.map((input, idx) => {
         const topPosition = input.style?.top || (inputs.length === 1 ? '50%' : `${((idx + 1) * 100) / (inputs.length + 1)}%`);
         return (
-          <div key={input.id} className="custom-node-handle-wrapper left-handle">
+          <React.Fragment key={input.id}>
             <Handle
               type="target"
               position={input.position || Position.Left}
@@ -83,7 +83,7 @@ export const BaseNode = ({
                 {input.label}
               </span>
             )}
-          </div>
+          </React.Fragment>
         );
       })}
 
@@ -91,7 +91,7 @@ export const BaseNode = ({
       {outputs.map((output, idx) => {
         const topPosition = output.style?.top || (outputs.length === 1 ? '50%' : `${((idx + 1) * 100) / (outputs.length + 1)}%`);
         return (
-          <div key={output.id} className="custom-node-handle-wrapper right-handle">
+          <React.Fragment key={output.id}>
             <Handle
               type="source"
               position={output.position || Position.Right}
@@ -112,7 +112,7 @@ export const BaseNode = ({
                 {output.label}
               </span>
             )}
-          </div>
+          </React.Fragment>
         );
       })}
     </div>
